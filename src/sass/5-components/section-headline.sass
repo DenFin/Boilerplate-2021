@@ -1,0 +1,16 @@
+.section-headline   
+    font-weight: 300
+    text-transform: uppercase
+    letter-spacing: 6px
+    font-size: 1.4rem
+    position: relative
+    display: inline-block
+
+    &::after
+        content: ""
+        display: block
+        position: absolute
+        bottom: -5px
+        height: 1px
+        background: $white
+        width: calc(100% - 5px)

@@ -1,0 +1,147 @@
+.container
+    margin: 0 auto
+
+.container-fluid
+    margin: 0 auto
+    max-width: 95%
+
+.container-full
+    width: 100%
+
+.row
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+
+.col
+    width: 100%
+
+.col, 
+[class*="col-"]
+    padding: 0 2rem
+
+.col-xs-12
+    width: 100%
+
+@media($mobileS)
+    .container
+        width: 95%
+
+    .col-xs-12
+        width: 100%
+
+@media($mobileM)
+    .container
+        width: 95%
+
+@media($mobileL)
+    .container
+        width: 380px
+
+@media($tablet)
+    .container
+        width: 700px
+
+    .col-md-6
+        flex-basis: 50%
+        max-width: 50%
+
+    .col-md-10
+        flex-basis: 83.3333%
+        max-width: 83.3333%
+
+@media($laptop)
+    .container
+        width: 980px
+
+    .row
+        flex-direction: row
+
+    .col
+        padding: 0 2rem
+
+    .col-lg-1
+        flex-basis: 8.3334%
+        max-width: 8.3334%
+
+    .col-lg-2
+        flex-basis: 16.6667%
+        max-width: 16.6667%
+
+    .col-lg-3
+        flex-basis: 25%
+        max-width: 25%
+
+    .col-lg-4
+        flex-basis: 33.3334%
+        max-width: 33.3334%
+    
+    .col-lg-5
+        flex-basis: 41.6667%
+        max-width: 41.6667%
+
+    .col-lg-6
+        flex-basis: 50%
+        max-width: 50%
+
+    .col-lg-7
+        flex-basis: 58.31%
+        max-width: 58.31%
+
+    .col-lg-8
+        flex-basis: 66.6667%
+        max-width: 66.6667%
+
+    .col-lg-10
+        flex-basis: 83.3333%
+        max-width: 83.3333%
+
+    .col-lg-12
+        flex-basis: 100%
+        max-width: 100%
+
+@media($laptopL)
+    .container
+        width: 1250px    
+
+@media($desktopL)
+    .container
+        width: 1440px    
+
+/** =====================
+ * GRID
+ ===================== */
+.grid
+    display: grid
+
+    &-gutter
+        grid-gap: 4rem
+
+    &-border
+        border-top: 2px solid $black
+        border-left: 2px solid $black
+
+    &-6-6
+        grid-template-columns: 1fr
+
+@media($tablet)
+    .grid
+        &-4-4-4
+            grid-template-columns: 1fr 1fr
+
+        &-6-6
+            grid-template-columns: 1fr
+
+@media($laptop)
+    .grid
+        &-6-6
+            grid-template-columns: 1fr 1fr
+
+        &-4-4-4
+            grid-template-columns: 1fr 1fr 1fr
+
+
+.half
+    width: 50%
+    padding-left: 4rem !important
+    padding-right: 4rem !important

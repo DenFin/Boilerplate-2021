@@ -1,0 +1,68 @@
+.btn
+    border-radius: 32px
+    display: inline-block
+    padding: .75em 1.5em
+
+    border: 2px solid $primaryColor
+    background: transparent
+    color: inherit
+    font-family: $accentFont
+    font-weight: bold
+    text-transform: uppercase
+    text-decoration: none
+
+    transition: background $transition, border-color $transition, color $transition
+
+    &:first-of-type
+        margin-right: 2rem
+    &:last-of-type
+        margin-right: 0
+
+    @media($laptop)
+        padding: 0.75em 2.5em
+
+
+    &--small
+        padding: .45em 1.5em
+
+    &--light
+        border-color: $white
+
+    &--primary
+        background: lighten($primaryColor, 50%)
+        color: $primaryColor
+        
+
+        &:hover
+            background: $white
+            color: $primaryColor
+
+    &--secondary
+        border: 2px $tertiaryColor solid
+        background: transparent
+        color: $tertiaryColor
+        &:hover
+            border-color: $white
+            background: $primaryColor
+            color: $white
+
+    &--dark
+        background: $black
+        border-color: $black
+        color: $white
+        &:hover
+            background: $primaryColor
+            border-color: $primaryColor
+            color: $white
+
+    &--transparent
+        background: transparentize($primaryColor, .85)
+        color: $primaryColor
+        &:hover
+            background: $primaryColor
+            color: $white
+
+.btn-group
+    .btn
+        margin-right: 1rem
+        margin-bottom: 1rem
